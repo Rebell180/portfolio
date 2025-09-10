@@ -1,3 +1,7 @@
+@use "../../shared/styles/mixins";
+@use "../../shared/styles/animations";
+// @import "./../../shared/styles/mixins.scss";
+
 .section-hero{
     background-image: url(./../../assets/img/pagetiles/hero_bg.png);
     background-repeat: no-repeat;
@@ -6,3 +10,106 @@
     width: 100dvw;
     height:100dvh;
 }
+
+.btn-up {
+    width: 120px;
+    height: 36px;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+    border-radius: 16px;
+    @include mixins.boxSh();
+    @include mixins.borRad();
+
+    margin-bottom: 4px;
+    margin-right: 4px;
+
+    &:hover {
+        box-shadow: none;
+        background-color: lightcoral;
+        @include animations.btnPressAnimation();
+    }
+}
+
+.btn-down {
+    width: 120px;
+    height: 36px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    @include mixins.borRad();
+}
+
+#hero-content {
+    width: 100%;
+    max-width: 45dvw;
+    height: 70dvh;
+
+    @include mixins.dFlex($flexdir: column, $gap: 1rem);
+
+    #hero-img-btn-line{
+        width: 100%;
+        @include mixins.dFlex($gap: 5rem);
+
+        #hero-btn-txt-wrapper {
+            height: 100%;
+            @include mixins.dFlex($flexdir: column, $jc: space-evenly, $alit: start);
+        }
+
+        #img-polaroid-frame {
+            @include mixins.size($w: 13.5rem, $h: 16rem);
+            @include mixins.dFlex($alit: flex-end, $jc: space-evenly);
+            @include mixins.bgImg($url : '../../assets/img/elementtiles/polaroid.png', $rotate: 8deg);
+
+            #polaroid-txt {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    #hero-dev-line {
+        width: 100%;
+        @include mixins.dFlex($flexdir: column, $jc: bottom, $alit: flex-end, $gap: 1rem);
+
+        .btn-wrapper{
+            height: 38px;
+            // padding-right: 4px;
+            // padding-bottom: 4px;
+            // @include mixins.boxSh();
+            // @include mixins.borRad();
+            &:hover {
+                box-shadow: none;
+                // background-color: lightcoral;
+                // animation: pressEffect 0.2s forwards;
+                // padding-right: 0px;
+                // padding-bottom: 0px;
+            }
+        }
+    }
+}
+
+// #region Hero - Frontend Developer
+
+span {
+    font-size: 96px;
+    font-weight: 800;
+    color: whitesmoke;
+
+    &:hover {
+        color: yellow; 
+    }
+}
+
+.lower {
+    &:hover {
+        text-transform: lowercase;
+    }
+}
+
+.upper {
+    &:hover {
+        text-transform: uppercase;
+    }
+}
+
+// #endregion Hero - Frontend Developer

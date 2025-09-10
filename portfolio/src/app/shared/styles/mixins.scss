@@ -1,6 +1,32 @@
-@mixin dFlexV() {
+
+@mixin size($w: 100%, $h: 100%) {
+    width: $w;
+    height: $h;
+}
+
+@mixin dFlex($jc: center, $alit: center, $flexdir: row, $gap: 0px, $wrap: nowrap) {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: $jc;
+    align-items: $alit;
+    flex-direction: $flexdir;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+
+@mixin bgImg($url , $repeat: no-repeat, $attach: center, $size: cover, $rotate: 0deg) {
+    background-image: url($url);
+    background-repeat: $repeat;
+    background-attachment: $attach;
+    background-size: $size;
+    transform: rotate($rotate);
+}
+
+@mixin borRad($c: white, $radius: 16px, $thick: 1px) {
+    border: $thick solid $c;
+    border-radius: $radius;
+}
+
+@mixin boxSh($right: 2px, $bottom: 4px, $blur: 2px, $all: 0px, $c: white) {
+    // right , bottom, spread, thick around 
+    box-shadow: $right $bottom $blur $all $c ;
 }

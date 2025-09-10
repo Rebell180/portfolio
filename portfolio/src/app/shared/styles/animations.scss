@@ -1,1 +1,15 @@
 
+@mixin btnPressAnimation() {
+    animation: btnPressEffect 0.25s forwards;
+}
+
+@keyframes btnPressEffect {
+  0% {
+    margin: 0 4px 4px 0;
+    background-color: coral;
+  }
+  100% {
+    margin: 4px 0 0 4px;
+    background-color: coral;
+  }
+}

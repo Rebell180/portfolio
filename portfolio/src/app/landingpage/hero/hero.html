@@ -1,19 +1,51 @@
 <section class="content section-hero ">
     <div id="hero-content">
         <div id="hero-img-btn-line">
+            
+            <div id="hero-btn-txt-wrapper">
+                <div>
 
+                    <button class="btn-down" type="button">Hello there</button>
+                </div>
+                
+                <div class="text-wrapper">
+                    @for (item of "Frontend"; track $index) {
+                        @if(item == item.toUpperCase()){
+                            <span class="lower">{{item}}</span>     
+                        }
+                        @else {
+                            <span class="upper">{{item}}</span>
+                        }
+                    } @empty {
+                        <span>undefined</span>
+                    }
+                </div>
+            </div>
+            
+            <div id="img-polaroid-frame" src="" alt="Shows a polaroid in white as a frame of a developer photo.">
+                <p id="polaroid-txt">Hallo :-)</p>
+            </div>
+            
         </div>
         <div id="hero-dev-line">
-            <p>
-                <!-- @for (item of profession; track $index) {
-                    <span>(item$)</span>     
-                } -->
-            </p>
+            <div class="text-wrapper">
+
+                <p>
+                    @for (item of profession; track $index) {
+                        @if(item == item.toUpperCase()){
+                            <span class="lower">{{item}}</span>     
+                        }
+                        @else {
+                            <span class="upper">{{item}}</span>
+                        }
+                    } @empty {
+                        <span>undefined</span>
+                    }
+                </p>
+            </div>
+            <div class="btn-wrapper">
+                <button id="btn-getintouch" class="btn-up" (mouseenter)="setOnClickStyle()" (mouseup)="setOnClickReleaseStyle()" type="button">Get in touch</button>
+            </div>
         </div>
     </div>
-
-
-
-
-    <p>hero works!</p>
 </section>

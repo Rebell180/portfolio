@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import './app/shared/styles/mixins.scss';
+@use './app/shared/styles/mixins';
 
 * {
     padding: 0;
@@ -12,11 +12,12 @@
 }
 
 body {
-    @include dFlexV();
+    @include mixins.dFlex($flexdir: column);
+    background-color: black;
 }
 
 .content {
     width: 100dvw;
-    max-width: 1920px;
-    @include dFlexV();
+    max-width: 1440px;
+    @include mixins.dFlex($flexdir: column);
 }
