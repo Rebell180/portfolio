@@ -1,6 +1,8 @@
 
-@mixin btnPressAnimation() {
-    animation: btnPressEffect 0.25s forwards;
+
+// #region Button pressing animation (also for hover)
+@mixin btnPressAnimation($duration: 0.25s) {
+    animation: btnPressEffect $duration forwards;
 }
 
 @keyframes btnPressEffect {

@@ -3,7 +3,7 @@
 // @import "./../../shared/styles/mixins.scss";
 
 .section-hero{
-    background-image: url(./../../assets/img/pagetiles/hero_bg.png);
+    background-image: url(../../../../public/assets/img/pagetiles/hero_bg.png);
     background-repeat: no-repeat;
     background-attachment: center;
     background-size: cover;
@@ -52,17 +52,27 @@
         @include mixins.dFlex($gap: 5rem);
 
         #hero-btn-txt-wrapper {
+            width: 24rem;
             height: 100%;
             @include mixins.dFlex($flexdir: column, $jc: space-evenly, $alit: start);
+
+            .text-wrapper {
+                width: 20rem;
+            }
         }
 
-        #img-polaroid-frame {
-            @include mixins.size($w: 13.5rem, $h: 16rem);
-            @include mixins.dFlex($alit: flex-end, $jc: space-evenly);
-            @include mixins.bgImg($url : '../../assets/img/elementtiles/polaroid.png', $rotate: 8deg);
+        #img-wrapper {
 
+            @include mixins.dFlex($flexdir: column, $alit: center);
+            #img-polaroid-frame {
+                @include mixins.size($w: 13.5rem, $h: 16rem);
+                rotate: 8deg;
+            }
             #polaroid-txt {
-                margin-bottom: 20px;
+                position: absolute;
+                bottom: 10%;
+                left: 32%;
+                rotate: 8deg;
             }
         }
     }
@@ -70,21 +80,6 @@
     #hero-dev-line {
         width: 100%;
         @include mixins.dFlex($flexdir: column, $jc: bottom, $alit: flex-end, $gap: 1rem);
-
-        .btn-wrapper{
-            height: 38px;
-            // padding-right: 4px;
-            // padding-bottom: 4px;
-            // @include mixins.boxSh();
-            // @include mixins.borRad();
-            &:hover {
-                box-shadow: none;
-                // background-color: lightcoral;
-                // animation: pressEffect 0.2s forwards;
-                // padding-right: 0px;
-                // padding-bottom: 0px;
-            }
-        }
     }
 }
 
