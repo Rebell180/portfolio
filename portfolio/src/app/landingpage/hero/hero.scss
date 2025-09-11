@@ -1,18 +1,14 @@
 @use "../../shared/styles/mixins";
 @use "../../shared/styles/animations";
-// @import "./../../shared/styles/mixins.scss";
 
-.section-hero{
-    background-image: url(../../../../public/assets/img/pagetiles/hero_bg.png);
-    background-repeat: no-repeat;
-    background-attachment: center;
-    background-size: cover;
+.section-hero {
+    @include mixins.bgImg("../../../../public/assets/img/pagetiles/hero_bg.png");
     width: 100dvw;
-    height:100dvh;
+    height: 100dvh;
 }
 
 .btn-up {
-    width: 120px;
+    width: 10rem;
     height: 36px;
     font-size: 16px;
     background-color: transparent;
@@ -32,10 +28,10 @@
 }
 
 .btn-down {
-    width: 120px;
+    width: 10rem;
     height: 36px;
     font-size: 16px;
-    background-color: black;
+    background-color: transparent;
     color: white;
     @include mixins.borRad();
 }
@@ -47,14 +43,39 @@
 
     @include mixins.dFlex($flexdir: column, $gap: 1rem);
 
-    #hero-img-btn-line{
+    #hero-img-btn-line {
         width: 100%;
-        @include mixins.dFlex($gap: 5rem);
+        
+        @include mixins.dFlex($gap: 8rem);
 
         #hero-btn-txt-wrapper {
             width: 24rem;
             height: 100%;
-            @include mixins.dFlex($flexdir: column, $jc: space-evenly, $alit: start);
+            @include mixins.dFlex($flexdir: column, $jc: space-evenly, $alit: start, $gap: 2rem);
+
+            #img-btn-wrapper {
+                height: 8rem;
+                @include mixins.dFlex($flexdir: column, $alit: end, $jc: end);
+
+                #btn-img-waving-hand {
+                    rotate: -90deg;
+                }
+
+                #btn-waving-hand {
+                    @include animations.bg-effect();
+                    @include animations.txt-switch-effect();
+                    @include animations.hand-icon(".hand-img");
+                    @include animations.button-width-effect();
+
+                    span {
+                        font-size: 16px;
+                    }
+
+                    &:hover {
+                        background-color: blue;
+                    }
+                }
+            }
 
             .text-wrapper {
                 width: 20rem;
@@ -64,10 +85,12 @@
         #img-wrapper {
 
             @include mixins.dFlex($flexdir: column, $alit: center);
+
             #img-polaroid-frame {
                 @include mixins.size($w: 13.5rem, $h: 16rem);
                 rotate: 8deg;
             }
+
             #polaroid-txt {
                 position: absolute;
                 bottom: 10%;
@@ -85,13 +108,13 @@
 
 // #region Hero - Frontend Developer
 
-span {
+.letter {
     font-size: 96px;
     font-weight: 800;
     color: whitesmoke;
 
     &:hover {
-        color: yellow; 
+        color: yellow;
     }
 }
 

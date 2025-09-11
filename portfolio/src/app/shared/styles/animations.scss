@@ -1,5 +1,3 @@
-
-
 // #region Button pressing animation (also for hover)
 @mixin btnPressAnimation($duration: 0.25s) {
     animation: btnPressEffect $duration forwards;
@@ -15,3 +13,127 @@
     background-color: coral;
   }
 }
+
+
+// #region hand-icon-effect
+@mixin hand-icon($selector) {
+  #{$selector} {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    transform: rotate(-100deg);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  @keyframes wave-in {
+    0% {
+      transform: rotate(-100deg);
+    }
+    10% {
+      transform: rotate(-90deg);
+    }
+    20% {
+      transform: rotate(-80deg);
+    }
+    30% {
+      transform: rotate(-70deg);
+    }
+    40% {
+      transform: rotate(-50deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    70% {
+      transform: rotate(-10deg);
+    }
+    80% {
+      transform: rotate(-15deg);
+    }
+    90% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes wave-out {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-100deg);
+    }
+  }
+
+  &.is-hover:hover,
+  &:hover {
+    #{$selector} {
+      opacity: 1;
+      top: -40px;
+      left: calc(100% - 0.8rem - 3rem);
+      animation: wave-in 0.6s ease forwards;
+    }
+  }
+  &:not(:hover) {
+    #{$selector} {
+      animation: wave-out 0.6s ease forwards;
+    }
+  }
+}
+// #endregion hand-icon-effect
+
+@mixin bg-effect {
+  background-color: #0e1013;
+  transition: background-color 1.25s ease-in-out;
+
+  &:hover {
+    background-color: #3355ff;
+  }
+}
+
+// #region button-witdh-effect
+@mixin button-width-effect {
+  @keyframes grow {
+    0% {
+      width: 10rem;
+    }
+    100% {
+      width: 17.3rem;
+    }
+  }
+
+  @keyframes shrink {
+    0% {
+      width: 17.3rem;
+    }
+    100% {
+      width: 10rem;
+    }
+  }
+
+  &:hover {
+    animation: grow 0.5s ease forwards;
+  }
+  &:not(:hover) {
+    animation: shrink 0.5s ease forwards;
+  }
+}
+// #endregion button-witdh-effect
+
+// #region txt-switch-effect
+@mixin txt-switch-effect {
+  .text-to-switch {
+    white-space: nowrap;
+  }
+
+  &:hover {
+    text-transform: uppercase;
+  }
+}
+// #endregion txt-switch-effect

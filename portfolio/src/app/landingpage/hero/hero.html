@@ -3,17 +3,25 @@
         <div id="hero-img-btn-line">
             
             <div id="hero-btn-txt-wrapper">
-                <div>
-                    <button class="btn-down" type="button">Hello there</button>
+                <div id="img-btn-wrapper">
+                    <button id="btn-waving-hand" class="btn-down wave-btn" (mouseover)="waveButtonHover = true" (mouseleave)="waveButtonHover = false" type="button">
+                        @if(waveButtonHover) {
+                            <span class="text-to-switch">I'm Marcel Buchmann</span>
+                        } @else {
+                            <span class="text-to-switch">Hello world!</span>
+                            
+                        }
+                        <img id="btn-img-waving-hand" class="hand-img" src="assets/img/icons/waving_hand.png" alt="a white symbol of an waving hand animated with hovering.">
+                    </button>
                 </div>
                 
                 <div class="text-wrapper">
                     @for (item of "Frontend"; track $index) {
                         @if(item == item.toUpperCase()){
-                            <span class="lower">{{item}}</span>     
+                            <span class="letter lower">{{item}}</span>     
                         }
                         @else {
-                            <span class="upper">{{item}}</span>
+                            <span class="letter upper">{{item}}</span>
                         }
                     } @empty {
                         <span>undefined</span>
@@ -21,7 +29,7 @@
                 </div>
             </div>
             <div id="img-wrapper">
-                <img id="img-polaroid-frame" src="assets/img/elementtiles/polaroid.png" alt="Shows a polaroid in white as a frame of a developer photo.">
+                <img id="img-polaroid-frame" src="assets/img/elementtiles/polaroid.png" (mouseover)="switchPolaroid(true)" (mouseleave)="switchPolaroid(false)" alt="Shows a polaroid in white as a frame of a developer photo.">
                 <p id="polaroid-txt">Hallo :-)</p>
             </div>
             <!-- </div> -->
@@ -29,14 +37,13 @@
         </div>
         <div id="hero-dev-line">
             <div class="text-wrapper">
-
                 <p>
                     @for (item of profession; track $index) {
                         @if(item == item.toUpperCase()){
-                            <span class="lower">{{item}}</span>     
+                            <span class="letter lower">{{item}}</span>     
                         }
                         @else {
-                            <span class="upper">{{item}}</span>
+                            <span class="letter upper">{{item}}</span>
                         }
                     } @empty {
                         <span>undefined</span>
