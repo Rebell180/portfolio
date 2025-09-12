@@ -1,5 +1,12 @@
+@use '../shared/styles/mixins';
+
 .section-landingpage {
-    width: 100dvw;
-    height: 100dvh;
     background-color: whitesmoke;
+    @include mixins.dFlex();
+    
+    app-header {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
 }

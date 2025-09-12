@@ -7,6 +7,8 @@
     height: 100dvh;
 }
 
+// #region Buttons pressed and to press
+
 .btn-up {
     width: 10rem;
     height: 36px;
@@ -35,6 +37,10 @@
     color: white;
     @include mixins.borRad();
 }
+
+// #endregion Buttons pressed and to press
+
+// #region hero content
 
 #hero-content {
     width: 100%;
@@ -105,6 +111,26 @@
         @include mixins.dFlex($flexdir: column, $jc: bottom, $alit: flex-end, $gap: 1rem);
     }
 }
+// #endregion hero content
+
+// #region hero sozials
+
+    #socials-container {
+        @include mixins.dFlex($flexdir: column, $gap: 2px);
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        z-index: 2;
+
+        img {
+            width: 40px;
+            height: 40px;
+            @include mixins.borRad($radius: 45px);
+            padding: 4px;
+        }
+    }
+
+// #endregion hero sozials
 
 // #region Hero - Frontend Developer
 
