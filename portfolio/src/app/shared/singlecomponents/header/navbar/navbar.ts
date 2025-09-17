@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslatePipe, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss'
 })
 export class Navbar {
-
+  private translate = inject(TranslateService);
 }

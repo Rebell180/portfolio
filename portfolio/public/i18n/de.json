@@ -1,0 +1,45 @@
+{
+    "LandingPage": {
+
+        "hero": {
+            "polaroid": "Hallo :-)",
+            "polaroidHov": "Hallo :-D"
+        },
+        "aboutme": {
+
+        },
+        "myProjects": {
+
+        },
+        "skills": {
+
+        },
+        "evaluation": {
+
+        },
+        "contact": {
+
+        }
+    },
+
+    "Imprint": {
+
+    },
+
+    "ProjectPage": {
+
+    },
+
+    "Header": {
+        "navbar": {
+            "aboutme": "Über mich",
+            "skills": "Skills",
+            "projects": "Projekte",
+            "contact": "Kontakt"
+        }
+    },
+
+    "Footer": {
+
+    }
+}

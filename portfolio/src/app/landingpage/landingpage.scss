@@ -2,7 +2,7 @@
 
 .section-landingpage {
     background-color: whitesmoke;
-    @include mixins.dFlex();
+    @include mixins.dFlex($flexdir: col);
     
     app-header {
         position: absolute;
