@@ -1,13 +1,11 @@
-@use '../../styles/mixins';
+@use '../../styles/all-styles' as all;
 
 #section-header {
     width: 100%;
-    // max-width: 1440px;
     height: 10dvh;
     background-color: transparent;
 
-    @include mixins.dFlex();
-    // image logo 
+    @include all.dFlex();
     #logo-container {
         width: 10%;
         img{
@@ -15,21 +13,17 @@
             height: 64px;
         }
     }
-    // navbar
     #nav-container {
         width: 80%;
-        @include mixins.dFlex();
+        @include all.dFlex();
         app-navbar {
             width: 80dvw;
         }
-
-        
     }
 
-    // choose language 
     #lang-container {
         width: 10%;
-        @include mixins.dFlex();
+        @include all.dFlex();
         img {
             width: 40px;
             height: 40px;

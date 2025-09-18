@@ -2,7 +2,7 @@
 @use "../../shared/styles/animations";
 
 .section-hero {
-    @include mixins.bgImg("../../../../public/assets/img/pagetiles/hero_bg.png");
+    @include mixins.bgImg("../../../../public/assets/img/backgrounds/page/lp/bg_hero.png");
     width: 100dvw;
     height: 100dvh;
 }

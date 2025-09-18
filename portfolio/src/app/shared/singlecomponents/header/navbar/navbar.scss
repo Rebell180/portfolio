@@ -1,11 +1,8 @@
-@use '../../../styles/mixins';
-@use '../../../styles/animations';
+@use '../../../styles/all-styles' as all;
 
 #section-navbar {
     background-color: transparent;
-    width: 100%;
-    height: 10dvh;
-    @include mixins.dFlex($alit: center, $jc: space-evenly);
+    @include all.dFlex($alit: center);
 
     ul {
         display: flex;
