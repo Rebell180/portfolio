@@ -1,7 +1,7 @@
 @use "../../shared/styles/all-styles" as all;
 
 .section-hero {
-    @include all.bgImg("../../../../public/assets/img/backgrounds/page/lp/bg_hero.png");
+    @include all.bgImg($path: "../../../../public/assets/img/backgrounds/page/lp/bg_hero.png");
     width: 100dvw;
     height: 100dvh;
 }

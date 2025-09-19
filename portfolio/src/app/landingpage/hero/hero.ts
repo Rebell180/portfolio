@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule],
   templateUrl: './hero.html',
   styleUrls: ['./hero.scss']
 })
@@ -13,8 +12,6 @@ export class Hero{
   profession_special: string= "Frontend";
   profession: string = "DEVELOPER";
   waveButtonHover: boolean = false;
-
-  private translate = inject(TranslateService);
 
   constructor(){
   }
@@ -37,14 +34,14 @@ export class Hero{
   setOnClickStyle () {
     let btnRef = document.getElementById("btn-getintouch");
     if (btnRef != null) {
-      btnRef.style.boxShadow.includes("none");// '@include mixins.boxSh();';
+      btnRef.style.boxShadow.includes("none");
     }
   }
 
   setOnClickReleaseStyle () {
     let btnRef = document.getElementById("btn-getintouch");
     if (btnRef != null) {
-      btnRef.style.boxShadow.includes("mixins.boxSh();");// '@include mixins.boxSh();';
+      btnRef.style.boxShadow.includes("mixins.boxSh();");
     }
   }
 }

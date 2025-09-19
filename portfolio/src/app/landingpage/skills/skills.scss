@@ -1,7 +1,7 @@
 @use "../../shared/styles/all-styles" as all;
 
 .section-skills {
-    @include all.bgImg("../../../../public/assets/img/backgrounds/page/lp/bg_skills.png");
+    @include all.bgImg($path: "../../../../public/assets/img/backgrounds/page/lp/bg_skills.png");
     height: 90dvh;
     @include all.dFlex($alit: start);
     padding: 5rem;
@@ -38,7 +38,7 @@
             padding: 1rem;
 
             @include all.dFlex($gap: 5rem);
-            @include all.bgImg("../../../../public/assets/img/elementtiles/skills_white.png");
+            @include all.bgImg($path: "../../../../public/assets/img/elementtiles/skills_white.png");
 
             p {}
         }
