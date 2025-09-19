@@ -8,15 +8,15 @@
 }
 
 #skills-container {
-    @include all.dFlex($jc: space-around, $alit: start, $gap: 2rem);
-    padding: 0 10rem;
+    @include all.dFlex($jc: space-around, $alit: start, $gap: 3.2rem);
+    padding: 0 16rem;
 
     .skill-col-1 {
         width: 20dvw;
         @include all.dFlex($flexdir: column, $alit: end);
 
         .sec-headline {
-            @include all.dFlex($flexdir: column, $alit: end, $gap: 2rem);
+            @include all.dFlex($flexdir: column, $alit: end, $gap: 3.2rem);
 
             #skill-sub-h {
                 color: all.$color-base-white;
@@ -31,31 +31,31 @@
 
     .skill-col-2 {
         width: 40dvw;
-        @include all.dFlex($flexdir: column, $gap: 5rem);
+        @include all.dFlex($flexdir: column, $gap: 8rem);
 
         .skill-intro-container {
-            height: 10rem;
-            padding: 1rem;
+            height: 16rem;
+            padding: 1.6rem;
 
-            @include all.dFlex($gap: 5rem);
+            @include all.dFlex($gap: 8rem);
             @include all.bgImg($path: "../../../../public/assets/img/elementtiles/skills_white.png");
 
             p {}
         }
 
         .skills-wrapper {
-            @include all.dFlex($gap: 3rem, );
+            @include all.dFlex($gap: 4.8rem, );
             flex-wrap: wrap;
 
             .skill {
-                @include all.dFlex($flexdir: column, $jc: center, $alit: center, $gap: 1rem, );
+                @include all.dFlex($flexdir: column, $jc: center, $alit: center, $gap: 1.6rem, );
                 width: 80px;
                 height: 120px;
 
                 img {
                     filter: grayscale(100%);
-                    width: 5rem;
-                    height: 5rem;
+                    width: 8rem;
+                    height: 8rem;
 
                     &:hover {
                         filter: grayscale(0);
@@ -77,8 +77,8 @@
         @include all.dFlex($alit: flex-end, $jc: start);
         .skills-testimonials-container {
             img {
-                width: 12rem;
-                height: 12rem;
+                width: 19.2rem;
+                height: 19.2rem;
                 rotate: (16deg);
             }
         }

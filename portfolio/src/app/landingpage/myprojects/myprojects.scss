@@ -1,3 +1,20 @@
+@use "../../shared/styles/all-styles" as all;
+
 .section-projects {
-    
+    @include all.dFlex($flexdir: column, $alit: start, $jc: start, $gap: 3.2rem);
+
+
+    .sec-headline {
+            @include all.dFlex($flexdir: column, $alit: start, $jc: start, $gap: 3.2rem);
+
+            #skill-sub-h {
+                color: all.$color-base-black;
+            }
+
+            #skill-h {
+                color: all.$color-base-black;
+                font-size: 64px;
+            }
+        }
+
 }
