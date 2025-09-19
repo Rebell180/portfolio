@@ -19,6 +19,7 @@
     background-attachment: $attach;
     background-size: $size;
     transform: rotate($rotate);
+    object-fit: cover;
 }
 
 @mixin borRad($c: white, $radius: 16px, $thick: 1px) {

@@ -1,18 +1,19 @@
 @use "../../shared/styles/all-styles" as all;
 
 .section-skills {
-    @include all.bgImg("../../../../public/assets/img/backgrounds/page/lp/bg_hero.png");
-    height: 100dvh;
-    width: 100%;
+    @include all.bgImg("../../../../public/assets/img/backgrounds/page/lp/bg_skills.png");
+    height: 90dvh;
+    @include all.dFlex($alit: start);
+    padding: 5rem;
 }
 
 #skills-container {
-    @include all.dFlex($jc: space-between, $alit: start, $gap: 5rem);
+    @include all.dFlex($jc: space-around, $alit: start, $gap: 2rem);
     padding: 0 10rem;
 
     .skill-col-1 {
         width: 20dvw;
-        @include all.dFlex($flexdir: column);
+        @include all.dFlex($flexdir: column, $alit: end);
 
         .sec-headline {
             @include all.dFlex($flexdir: column, $alit: end, $gap: 2rem);
@@ -33,7 +34,7 @@
         @include all.dFlex($flexdir: column, $gap: 5rem);
 
         .skill-intro-container {
-            height: 8rem;
+            height: 10rem;
             padding: 1rem;
 
             @include all.dFlex($gap: 5rem);
@@ -59,6 +60,7 @@
                     &:hover {
                         filter: grayscale(0);
                         transform: scale(1.3);
+                        transition: 0.5s ease;
                     }
                 }
 
@@ -72,7 +74,7 @@
     .skill-col-3 {
         width: 20dvw;
         height: 50dvh;
-        @include all.dFlex($alit: flex-end);
+        @include all.dFlex($alit: flex-end, $jc: start);
         .skills-testimonials-container {
             img {
                 width: 12rem;

@@ -19,5 +19,6 @@ body {
 .content {
     width: 100dvw;
     max-width: 1440px;
+    padding: 0 5dvw;
     @include mixins.dFlex($flexdir: column);
 }
