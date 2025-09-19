@@ -1,1 +1,41 @@
-<p>skills works!</p>
+<section class="content section-skills">
+    <div id="skills-container">
+
+
+        <div class="skill-col-1">
+
+            <div class="sec-headline">
+                <h3 id="skill-sub-h">My Stack</h3>
+                <h2 id="skill-h">Skill Set</h2>
+            </div>
+
+        </div>
+
+        <div class="skill-col-2">
+
+            <div class="skill-intro-container">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam labore, illo modi eveniet eaque quidem sunt ullam cupiditate impedit perferendis voluptas cum quia expedita cumque dolor amet. Doloremque, beatae quae?</p>
+            </div>
+
+            <div class="skills-wrapper">
+                @for( item of skills; track $index ) {
+                    <div class="skill">
+                        <img src="{{item.src}}" alt="">
+                        <p>{{item.name}}</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="skill-col-3">
+            <div></div>
+            <div class="skills-testimonials-container">
+                <img src="assets/img/elementtiles/A1.png" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>

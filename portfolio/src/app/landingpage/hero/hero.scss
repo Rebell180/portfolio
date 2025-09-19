@@ -1,8 +1,7 @@
-@use "../../shared/styles/mixins";
-@use "../../shared/styles/animations";
+@use "../../shared/styles/all-styles" as all;
 
 .section-hero {
-    @include mixins.bgImg("../../../../public/assets/img/backgrounds/page/lp/bg_hero.png");
+    @include all.bgImg("../../../../public/assets/img/backgrounds/page/lp/bg_hero.png");
     width: 100dvw;
     height: 100dvh;
 }
@@ -16,8 +15,9 @@
     background-color: transparent;
     color: white;
     border-radius: 16px;
-    @include mixins.boxSh();
-    @include mixins.borRad();
+    
+    @include all.boxSh();
+    @include all.borRad();
 
     margin-bottom: 4px;
     margin-right: 4px;
@@ -25,7 +25,7 @@
     &:hover {
         box-shadow: none;
         background-color: lightcoral;
-        @include animations.btnPressAnimation();
+        @include all.btnPressAnimation();
     }
 }
 
@@ -35,8 +35,10 @@
     font-size: 16px;
     background-color: transparent;
     color: white;
-    @include mixins.borRad();
+    @include all.borRad();
 }
+
+
 
 // #endregion Buttons pressed and to press
 
@@ -47,31 +49,31 @@
     max-width: 45dvw;
     height: 70dvh;
 
-    @include mixins.dFlex($flexdir: column, $gap: 1rem);
+    @include all.dFlex($flexdir: column, $gap: 1rem);
 
     #hero-img-btn-line {
         width: 100%;
         
-        @include mixins.dFlex($gap: 8rem);
+        @include all.dFlex($gap: 8rem);
 
         #hero-btn-txt-wrapper {
             width: 24rem;
             height: 100%;
-            @include mixins.dFlex($flexdir: column, $jc: space-evenly, $alit: start, $gap: 2rem);
+            @include all.dFlex($flexdir: column, $jc: space-evenly, $alit: start, $gap: 2rem);
 
             #img-btn-wrapper {
                 height: 8rem;
-                @include mixins.dFlex($flexdir: column, $alit: end, $jc: end);
+                @include all.dFlex($flexdir: column, $alit: end, $jc: end);
 
                 #btn-img-waving-hand {
                     rotate: -90deg;
                 }
 
                 #btn-waving-hand {
-                    @include animations.bg-effect();
-                    @include animations.txt-switch-effect();
-                    @include animations.hand-icon(".hand-img");
-                    @include animations.button-width-effect();
+                    @include all.bg-effect();
+                    @include all.txt-switch-effect();
+                    @include all.hand-icon(".hand-img");
+                    @include all.button-width-effect();
 
                     span {
                         font-size: 16px;
@@ -90,10 +92,10 @@
 
         #img-wrapper {
 
-            @include mixins.dFlex($flexdir: column, $alit: center);
+            @include all.dFlex($flexdir: column, $alit: center);
 
             #img-polaroid-frame {
-                @include mixins.size($w: 13.5rem, $h: 16rem);
+                @include all.size($w: 13.5rem, $h: 16rem);
                 rotate: 8deg;
             }
 
@@ -108,7 +110,7 @@
 
     #hero-dev-line {
         width: 100%;
-        @include mixins.dFlex($flexdir: column, $jc: bottom, $alit: flex-end, $gap: 1rem);
+        @include all.dFlex($flexdir: column, $jc: bottom, $alit: flex-end, $gap: 1rem);
     }
 }
 // #endregion hero content
@@ -116,7 +118,7 @@
 // #region hero sozials
 
     #socials-container {
-        @include mixins.dFlex($flexdir: column, $gap: 2px);
+        @include all.dFlex($flexdir: column, $gap: 2px);
         position: absolute;
         bottom: 10%;
         left: 5%;
@@ -125,7 +127,7 @@
         img {
             width: 40px;
             height: 40px;
-            @include mixins.borRad($radius: 45px);
+            @include all.borRad($radius: 45px);
             padding: 4px;
         }
     }

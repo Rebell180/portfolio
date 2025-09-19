@@ -21,15 +21,15 @@ export class Hero{
 
   switchPolaroid(hover: boolean) {
     const polaroidRef = document.getElementById("img-polaroid-frame") as HTMLImageElement;
-    const polaroidTxtRef = document.getElementById("polaroid-txt");
+    const polaroidTxtRef = document.getElementById("polaroid-smile-txt");
 
     if(polaroidRef !== null && polaroidTxtRef !== null) {
       if(hover) {
         polaroidRef.src = "assets/img/elementtiles/polaroid.png";
-        polaroidTxtRef.innerHTML = "{{ 'LandingPage.hero.polaroidHov' | translate }}";
+        polaroidTxtRef.innerHTML = ":-D";
       } else {
         polaroidRef.src = "assets/img/elementtiles/polaroid_colored.png";
-        polaroidTxtRef.innerHTML = `{{ 'LandingPage.hero.polaroid' | translate }}`;
+        polaroidTxtRef.innerHTML = `:-)`;
       }
     }
   }

@@ -1,0 +1,89 @@
+@use "../../shared/styles/all-styles" as all;
+
+
+#section-aboutme {
+    .aboutme-container{
+        @include all.dFlex($alit: start);
+        
+        #aboutme-left-side {
+            width: 50%;
+            @include all.dFlex($flexdir: column);
+
+            .aboutme-main-info-container {
+                @include all.dFlex($flexdir: column, $jc: center);
+                width: 75%;
+
+                >img {
+                    width: 100%;
+                }
+                
+                .icon-txt-container {
+                    position: absolute;
+                    @include all.dFlex($alit: center, $gap: 1rem);
+                    
+                    .aboutme-icon {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                    
+                    span {
+                        color: white;
+                        font-size: 20px;;
+                    }
+                }
+            }
+
+            #location-container {
+                top: 3rem;
+                z-index: 3;
+                transform: rotate(-2deg);
+                >div {
+                    top: 2.5rem;
+                    span{
+                        transform: rotate(-4deg);
+                    }
+                }
+            }
+
+            #relocate-container {
+                z-index: 2;
+            }
+
+            #remote-container{
+                bottom: 3rem;
+                z-index: 1;
+                transform: rotate(6deg);
+
+                >div {
+                top: 3rem;
+                span{
+                    transform: rotate(2deg);
+                }
+                }
+            }
+        }
+
+        #aboutme-right-side {
+            width: 50%;
+            padding: 2rem;
+            
+            h3 {
+                width: 100%;
+
+            }
+
+            h2 {
+                width: 100%;
+                font-size: 64px;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                width: 80%;
+            }
+        }
+    }
+
+
+
+}

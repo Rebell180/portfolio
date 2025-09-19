@@ -10,7 +10,7 @@
                             <span class="text-to-switch">Hello world!</span>
                             
                         }
-                        <img id="btn-img-waving-hand" class="hand-img" src="assets/img/icons/waving_hand.png" alt="a white symbol of an waving hand animated with hovering.">
+                        <img id="btn-img-waving-hand" class="hand-img" src="assets/img/icons/white/waving_hand.png" alt="a white symbol of an waving hand animated with hovering.">
                     </button>
                 </div>
                 
@@ -27,9 +27,9 @@
                     }
                 </div>
             </div>
-            <div id="img-wrapper">
-                <img id="img-polaroid-frame" src="assets/img/elementtiles/polaroid.png" (mouseover)="switchPolaroid(true)" (mouseleave)="switchPolaroid(false)" alt="Shows a polaroid in white as a frame of a developer photo.">
-                <p id="polaroid-txt">{{ 'LandingPage.hero.polaroid' | translate}}</p>
+            <div id="img-wrapper" (mouseover)="switchPolaroid(true)" (mouseleave)="switchPolaroid(false)">
+                <img id="img-polaroid-frame" src="assets/img/elementtiles/polaroid.png" alt="Shows a polaroid in white as a frame of a developer photo.">
+                <p id="polaroid-txt">Marcel <span id="polaroid-smile-txt"> :-)</span></p>
             </div>
             
         </div>
