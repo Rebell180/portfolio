@@ -1,0 +1,20 @@
+@use "../../../shared/styles/all-styles" as all;
+
+.project-container {
+    @include all.dFlex($flexdir: column, $alit: start);
+    max-width: 500px;
+
+    .project-img-container {
+        @include all.dFlex($flexdir: column, $alit: end);
+        
+        >img {
+            width: 500px;;
+        }
+
+        .project-btn {
+            position: absolute;
+            bottom: 5rem;
+            right: 5rem;
+        }
+    }
+}

@@ -1,20 +1,32 @@
 @use "../../shared/styles/all-styles" as all;
 
 .section-projects {
-    @include all.dFlex($flexdir: column, $alit: start, $jc: start, $gap: 3.2rem);
+    @include all.dFlex( $flexdir: column, $alit: start, $gap: 3.2rem);
+    flex-wrap: wrap;
 
+    .projects-firstline {
+        @include all.dFlex( $jc: start, $gap: 3.2rem);
 
-    .sec-headline {
+        .sec-headline {
             @include all.dFlex($flexdir: column, $alit: start, $jc: start, $gap: 3.2rem);
-
-            #skill-sub-h {
+            width: 500px;
+            .projects-sub-h {
                 color: all.$color-base-black;
             }
-
-            #skill-h {
+            
+            .projects-h {
                 color: all.$color-base-black;
                 font-size: 64px;
             }
         }
 
+        app-project {
+            width: 50%;
+        }
+        
+    }
+    .projects-container {
+            @include all.dFlex($jc: start, $gap: 3.2rem);
+            flex-wrap: wrap;
+        }
 }

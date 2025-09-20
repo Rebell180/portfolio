@@ -1,0 +1,37 @@
+@use "../../shared/styles/all-styles" as all;
+
+#section-evaluation {
+    width: 100dvw;
+    justify-content: end; align-items: end;
+
+    #evaluation-firstline {
+        // @include all.dFlex($alit: end);
+        .sec-headline {
+            @include all.dFlex($flexdir: column, $gap: 3.2rem);
+            
+            .evaluation-sub-h {
+                text-align: end;
+                width: 100%;
+                color: all.$color-base-black;
+            }
+            
+            .evaluation-h {
+                color: all.$color-base-black;
+                font-size: 64px;
+            }
+        }
+        
+    }
+}
+
+#evaluations-container {
+    @include all.dFlex();
+    
+    .evaluation-card-container {
+
+        @include all.bgImg("/public/assets/img/lines/testimonials/A.png");
+
+        width: 500px;
+        height: 400px;
+    }
+}

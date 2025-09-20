@@ -1,7 +1,16 @@
 
 <section class="content section-projects">
-    <div class="sec-headline">
-        <h3 id="skill-sub-h">My Craft</h3>
-        <h2 id="skill-h">Projects</h2>
+    <div class="projects-firstline">
+        <div class="sec-headline">
+            <h3 class="projects-sub-h">My Craft</h3>
+            <h2 class="projects-h">Projects</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut unde perspiciatis officia minima esse voluptas optio excepturi pariatur aliquam cumque facilis sapiente maxime mollitia, ipsum debitis harum, nemo iure eligendi.</p>
+        </div>
+        <app-project [project]="teamproject"></app-project>
+    </div>
+    <div class="projects-container">
+        @for( item of projects; track $index) {
+            <app-project [project]="item" ></app-project>
+        }
     </div>
 </section>
