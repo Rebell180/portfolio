@@ -26,12 +26,70 @@
 
 #evaluations-container {
     @include all.dFlex();
+    width: 100%;
+    margin-top: 5rem;
     
     .evaluation-card-container {
+        @include all.bgImg("../../../../public/assets/img/elementtiles/A.png", $size: contain);
 
-        @include all.bgImg("/public/assets/img/lines/testimonials/A.png");
+        width: 42rem;
+        height: 30rem;
 
-        width: 500px;
-        height: 400px;
+        .evaluation-card-content {
+            @include all.dFlex($flexdir: column, $jc: space-between);
+            height: 94%;
+            position: absolute;
+            top: 0;
+            padding: 3rem;
+            color: white;
+
+            .evaluation-card-infoline {
+                @include all.dFlex($jc: space-between);
+                width: 100%;
+                .evaluation-ident-container {
+                    @include all.dFlex($flexdir: column);
+                    color: black;
+                }
+
+                .evaluation-profile-link {
+                    @include all.dFlex($jc: space-between);
+                    font-size: 2rem;
+                    color: black;
+
+                    img {
+                        color: black;
+                        color-interpolation-filters: linearRGB;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: transparent;
+                @include all.bgImg("../../../../public/assets/img/lines/testimonials/lines.png", $size: contain);
+            }
+        }        
+        
+    }
+    
+    #evaluation-left {
+        left: 10rem; 
+        transform: rotate(-8deg);
+        &:hover {
+            z-index: 3;
+        }
+    }
+
+    #evaluation-center {
+        @include all.bgImg("../../../../public/assets/img/elementtiles/b.png", $size: contain);
+        z-index: 2;
+    }
+
+    #evaluation-right {
+        right: 10rem;
+        transform: rotate(8deg);
+
+        &:hover {
+            z-index: 3;
+        }
     }
 }
