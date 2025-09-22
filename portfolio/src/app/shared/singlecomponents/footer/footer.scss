@@ -1,1 +1,28 @@
 @use '../../styles/all-styles' as all;
+
+footer {
+    width: 100dvw;
+    @include all.dFlex($jc: space-between, $alit: end);
+    margin-bottom: 3rem;
+
+    .footer-ident {
+        width: 100%;
+        @include all.dFlex($flexdir: column, $alit: start);
+        img {
+            width: 4.8rem;
+            height: 3.5rem;
+        }
+        p {
+            color: white;
+        }
+        a {
+            text-decoration: none;
+        };
+    }
+
+    .footer-socials {
+        width: 100%;
+        @include all.dFlex($jc: space-between);
+    }
+
+}

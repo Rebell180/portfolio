@@ -6,10 +6,11 @@ import { Skills } from "./skills/skills";
 import { Myprojects } from "./myprojects/myprojects";
 import { Evaluation } from "./evaluation/evaluation";
 import { Contact } from "./contact/contact";
+import { Footer } from "../shared/singlecomponents/footer/footer";
 
 @Component({
   selector: 'app-landingpage',
-  imports: [Hero, Header, Aboutme, Skills, Myprojects, Evaluation, Contact],
+  imports: [Hero, Header, Aboutme, Skills, Myprojects, Evaluation, Contact, Footer],
   templateUrl: './landingpage.html',
   styleUrl: './landingpage.scss'
 })
