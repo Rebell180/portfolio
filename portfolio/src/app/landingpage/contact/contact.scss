@@ -1,0 +1,116 @@
+@use "../../shared/styles/all-styles" as all;
+
+#section-contact {
+
+    @include all.bgImg("../../../../public/assets/img/backgrounds/page/lp/bg_contact.png");
+    width: 100dvw;
+    height: 100dvh;
+    margin-top: 5rem;
+
+    .contact-me-container {
+        @include all.dFlex();
+
+        .contact-me-info-container {
+            border: 2px solid green; 
+            width: 50%;
+
+            #contact-firstline {
+
+                .sec-headline {
+                    @include all.dFlex($flexdir: column, $gap: 3.2rem);
+
+                    .contact-sub-h {
+                        text-align: start;
+                        width: 100%;
+                        color: all.$color-base-white;
+                    }
+
+                    .contact-h {
+                        color: all.$color-base-white;
+                        font-size: 64px;
+                    }
+                }
+
+            }
+
+            p {
+                color: white;
+                margin: 2rem 0;
+            }
+        }
+
+        border: 2px solid yellow; 
+
+        .contact-me-form-container {
+            width: 50%;
+            border: 2px solid red;  
+            
+            .emblem-container {
+                position: absolute;
+                right: 0;
+                z-index: 2;
+                #img-emblem {
+                    width: 15rem;
+                    height: 15rem;
+                    transform: rotate(32deg);
+                }
+            }
+
+
+            form {
+                @include all.dFlex($flexdir: column);
+                width: 100%;
+                margin-top: 10rem;
+                .form-container {
+                    width: 100%;
+                    @include all.dFlex($flexdir: column);
+                    padding: 3rem;
+                    >div {
+                        width: 100%;
+                        @include all.dFlex($flexdir: column, $alit: start, $gap: 1rem);
+                        margin-bottom: 2rem;
+                        label {
+                            width: 100%;
+                            color: white;
+                        }
+
+                        input, textarea {
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
+                            border-bottom: 1px solid yellow;
+                            color: white;
+
+                            outline: none;
+                            border-inline: none;
+
+                            &:focus {
+                                border: none;
+                                border-bottom: 1px solid yellow;
+                                color: white;
+                                outline:none;
+                                background: transparent;
+                            }
+                        }
+                    }
+
+                    .contact-policy-container {
+                        width: 100%;
+                        @include all.dFlex($jc: space-around);
+
+                        span {
+                            width: 90%;
+                            color: white;
+                        }
+                        input {
+                            width: 5%;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}
