@@ -2,7 +2,7 @@
 
 footer {
     width: 100dvw;
-    @include all.dFlex($jc: space-between, $alit: end);
+    @include all.dFlex($flexdir: column,$jc: space-between, $alit: end);
     margin-bottom: 3rem;
 
     .footer-ident {
@@ -15,14 +15,24 @@ footer {
         p {
             color: white;
         }
-        a {
-            text-decoration: none;
-        };
     }
 
     .footer-socials {
         width: 100%;
         @include all.dFlex($jc: space-between);
+
+        a {
+            font-size: 20px;
+            color: white;
+
+            &:visited {
+                color: lightgrey;
+            }
+
+            &:hover {
+                color: yellow;
+            }
+        }
     }
 
 }
