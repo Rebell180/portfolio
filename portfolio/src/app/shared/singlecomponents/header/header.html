@@ -8,18 +8,18 @@
     </div>
 
     <div id="lang-container">
-        <button (click)="useLanguage('en')">
-            <img src="assets/img/lines/header/toggle.png" alt="">
-            EN
-        </button>
-        <div id="radio-wrapper">
-            <img src="assets/img/icons/colored/radiobtn_rail.png" alt="">
-            <img src="assets/img/icons/colored/radiobtn_bubble.png" alt="">
+        <div class="btn-lang-container">
+            <button class="btn-lang" (click)="useLanguage('en')">EN</button>
+            <img [style.visibility]="isLangEN ? 'visible' : 'hidden'"   class="btn-img-lang" src="assets/img/lines/header/toggle.png" alt="">
         </div>
-        <button (click)="useLanguage('de')">
-            <img src="assets/img/lines/header/toggle.png" alt="">
-            DE
-        </button>
+        <div id="radio-wrapper">
+            <img class="btn-radio-line" src="assets/img/icons/colored/radiobtn_rail.png" alt="">
+            <img [style.right]="isLangDE ? '0' : '2.5rem'"class="btn-radio-ball" src="assets/img/icons/colored/radiobtn_bubble.png" alt="">
+        </div>
+        <div class="btn-lang-container">
+            <button class="btn-lang" (click)="useLanguage('de')">DE</button>
+            <img [style.visibility]="isLangDE ? 'visible' : 'hidden'" class="btn-img-lang" src="assets/img/lines/header/toggle.png" alt="">
+        </div>
     </div>
 
 </header>

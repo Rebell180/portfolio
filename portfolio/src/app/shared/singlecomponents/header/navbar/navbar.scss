@@ -8,23 +8,34 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 16rem;
+        gap: 10rem;
         li{
             font-weight: bold;
             color: white;
-            
+            width: 14rem;
             >a {
-                max-width: 100px;
-
-                img {
-                    width: 100px;
-                }
+                margin: 2rem;
+                max-width: 18rem;
+                text-align: start;
+                
 
                 &:visited {
                     color: white;
                 }
             }
 
+            img {
+                position: absolute;
+                top: -1.5rem;
+                left: 0;
+                width: 120px;
+                visibility: hidden;
+                
+            }
+
+            &:hover img {
+                visibility: visible;
+            }
         }
 
         #nav-item-about{
