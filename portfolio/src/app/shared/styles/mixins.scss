@@ -32,9 +32,10 @@
     box-shadow: $right $bottom $blur $all $c ;
 }
 
-@mixin bgImg($path: string, $repeat: no-repeat, $attach: center, $size: cover) {
+@mixin bgImg($path: string, $repeat: no-repeat, $attach: center, $size: cover, $position: center) {
     background-image: url($path);
     background-repeat: $repeat;
     background-attachment: $attach;
     background-size: $size;
+    background-position: $position;
 }

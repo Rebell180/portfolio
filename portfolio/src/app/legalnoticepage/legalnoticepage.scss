@@ -1,0 +1,69 @@
+@use '../shared/styles/all-styles' as all;
+
+#section-legal-notice {
+    background-color: black;
+    width: 100dvw;
+    @include all.dFlex($flexdir: column);
+    
+    .legal-notice-hero {
+        width: 100%;
+        height: 45dvh;
+
+        background-color: white;
+        @include all.dFlex();
+        @include all.bgImg($path: "../../../../public/assets/img/backgrounds/page/lp/bg_skills.png", $size: cover, $position: bottom);
+
+        h1 {
+            color: white;
+            left: 5rem;
+        }
+    }
+
+    .legal-notice-content {
+        @include all.dFlex($gap: 10rem);
+        background-color: white;
+        padding-bottom: 15dvh;
+
+        .legal-notice-container {
+            left: 5rem;
+            background: transparent;
+
+            a {
+                font-size: 18px;
+                margin-bottom: 1rem;
+            }
+
+            h2 {
+                font-size: 20px;;
+                margin: 1rem 0;
+            }
+        }
+
+        .legal-notice-details-container {
+
+            h2 {
+                font-size: 20px;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+app-header {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 5rem;
+    right: 5rem;
+}
+
+app-footer {
+    width: 100%;
+    background-color: rgba(50,50,50, 0.8);
+    padding: 3rem 0;
+}

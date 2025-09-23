@@ -1,13 +1,16 @@
 @use '../../styles/all-styles' as all;
 
 footer {
-    width: 100dvw;
-    @include all.dFlex($flexdir: column,$jc: space-between, $alit: end);
-    margin-bottom: 3rem;
+    width: 100%;
+
+    @include all.dFlex($flexdir: column,$alit: start, $jc: space-between);
+    height: 10dvh;
+    
 
     .footer-ident {
         width: 100%;
         @include all.dFlex($flexdir: column, $alit: start);
+        margin-bottom: 0.5rem;
         img {
             width: 4.8rem;
             height: 3.5rem;
@@ -19,7 +22,7 @@ footer {
 
     .footer-socials {
         width: 100%;
-        @include all.dFlex($jc: space-between);
+        @include all.dFlex($jc: space-between, $gap: 2rem);
 
         a {
             font-size: 20px;

@@ -41,7 +41,6 @@
                     height: 40px;
                     left: -1rem;
                     top: 0.3rem;
-                    visibility: hidden;
                 }
         }
 
@@ -50,13 +49,8 @@
             @include all.dFlex();
             top: 0.5rem;
 
-            .btn-radio-line {
-
-            }
-
             .btn-radio-ball {
                 position: absolute;
-                // right: 0;
                 transition: 0.5s ease-in-out;
             }   
         }
