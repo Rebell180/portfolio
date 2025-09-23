@@ -70,13 +70,12 @@
                 }
 
                 #btn-waving-hand {
-                    @include all.bg-effect();
                     @include all.txt-switch-effect();
-                    @include all.hand-icon(".hand-img");
-                    @include all.button-width-effect();
+                    @include all.wave-icon(".hand-img");
+
 
                     &:hover {
-                        background-color: blue;
+                        @include all.animate($animation: ElementGrowAnColorLeftToRight, $duration: 0.5s ease-in-out);
                     }
                 }
             }
@@ -125,7 +124,18 @@
             height: 4rem;
             @include all.borRad($radius: 4.5rem);
             padding: 4px;
+
+            box-shadow: inset 0 -3px 0 -1px #24DD80;
+            transition: box-shadow .15s ease-in-out;
+            color: black;
+            line-height: 40px;
+
+            &:hover {
+                box-shadow: inset 0 -40px 0 -1px #1073EA;
+                // @include all.animate($animation: bgColorFadeInBottomToTop, $duration: 0.5s ease-in);
+            }
         }
+
     }
 
 // #endregion hero sozials

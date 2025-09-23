@@ -34,7 +34,14 @@
             }
 
             &:hover img {
+                z-index: 1;
+                top:0;
                 visibility: visible;
+                @include all.animate($animation: bgImgFadeInTopToBottom);
+            }
+
+            &:hover #about-hover {
+                @include all.animate($animation: bgImgFadeInLeftToRight);
             }
         }
 

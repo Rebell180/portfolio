@@ -19,7 +19,6 @@
                 font-size: 64px;
             }
         }
-        
     }
 }
 
@@ -36,7 +35,7 @@
 
         .evaluation-card-content {
             @include all.dFlex($flexdir: column, $jc: space-between);
-            height: 94%;
+            height: 100%;
             position: absolute;
             top: 0;
             padding: 3rem;

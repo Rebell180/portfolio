@@ -1,22 +1,74 @@
-// #region Button pressing animation (also for hover)
-@mixin btnPressAnimation($duration: 0.25s) {
-    animation: btnPressEffect $duration forwards;
+@mixin animate($animation: btnPressEffect, $duration:0.25s, $iteration: forwards, $transition: 0.25 ease-in ){
+  animation: $animation $duration $iteration;
+  transition: $transition;
 }
 
-@keyframes btnPressEffect {
-  0% {
-    margin: 0 4px 4px 0;
-    background-color: coral;
+// #region Keyframes / Animations
+
+// #region bgImg - Animations
+
+  @keyframes bgImgFadeInLeftToRight {
+    0% {
+      width: 0%;
+      height: 100%;
+      top: 0;
+    }
+    100% {
+      width: 100%;
+    }
   }
-  100% {
-    margin: 4px 0 0 4px;
-    background-color: coral;
+
+  @keyframes bgImgFadeInTopToBottom {
+    0% {
+      width: 100%;
+      height: 0%;
+      top:0;
+    }
+    100% {
+      top: -1rem;
+      height: 200%;
+    }
   }
-}
+
+  // #endregion bgImg - Animations
+
+// #region bgColor - Animations
+
+  @keyframes bgColorFadeInBottomToTop {
+    0% {
+      width: 100%;
+      height: 0%;
+      bottom: 0;
+      background: blue;
+      
+    }
+    100% {
+      height: 100%;
+      background: blue;
+    }
+  }
+
+// #endregion bgColor - Animations 
+
+  @keyframes ElementGrowAnColorLeftToRight {
+    0% {
+
+      box-shadow: inset 0.3rem 0 0 -1px #24DD80;
+      transition: box-shadow .0.25s ease-in-out;
+      color: black;
+      line-height: 40px;
+      width: 16rem;
+    }
+    100% {
+      box-shadow: inset 25rem 0 0 -1px #1073EA;
+      width: 27.68rem;
+    }
+  }
+// #endregion Keyframes / Animations
 
 // #region hand-icon-effect
-@mixin hand-icon($selector) {
-  #{$selector} {
+@mixin wave-icon($elementId) {
+  #{$elementId} {
     position: absolute;
     top: -6.4rem;
     right: 0;
@@ -72,7 +124,7 @@
 
   &.is-hover:hover,
   &:hover {
-    #{$selector} {
+    #{$elementId} {
       opacity: 1;
       top: -40px;
       left: calc(100% - 1.28rem - 4.8rem);
@@ -80,12 +132,31 @@
     }
   }
   &:not(:hover) {
-    #{$selector} {
+    #{$elementId} {
       animation: wave-out 0.6s ease forwards;
     }
   }
 }
 // #endregion hand-icon-effect
+
+
+// #region Button pressing animation (also for hover)
+@mixin btnPressAnimation($duration: 0.25s) {
+    animation: btnPressEffect $duration forwards;
+}
+
+@keyframes btnPressEffect {
+  0% {
+    margin: 0 4px 4px 0;
+    background-color: coral;
+  }
+  100% {
+    margin: 4px 0 0 4px;
+    background-color: coral;
+  }
+}
+
+
 
 @mixin bg-effect {
   background-color: #0e1013;
