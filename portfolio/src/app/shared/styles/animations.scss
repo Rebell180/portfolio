@@ -60,8 +60,8 @@
       width: 16rem;
     }
     100% {
-      box-shadow: inset 25rem 0 0 -1px #1073EA;
-      width: 27.68rem;
+      box-shadow: inset 29rem 0 0 -1px #1073EA;
+      width: 32rem;
     }
   }
 // #endregion Keyframes / Animations
@@ -83,34 +83,46 @@
       transform: rotate(-100deg);
     }
     10% {
-      transform: rotate(-90deg);
-    }
-    20% {
       transform: rotate(-80deg);
     }
+    20% {
+      transform: rotate(-60deg);
+    }
     30% {
-      transform: rotate(-70deg);
+      transform: rotate(-40deg);
     }
     40% {
-      transform: rotate(-50deg);
-    }
-    50% {
       transform: rotate(-20deg);
     }
+    50% {
+      transform: rotate(-0deg);
+    }
     60% {
-      transform: rotate(0deg);
+      transform: rotate(20deg);
+    }
+    65% {
+      transform: rotate(40deg);
     }
     70% {
-      transform: rotate(-10deg);
+      transform: rotate(60deg);
+    }
+    75% {
+      transform: rotate(40deg);
     }
     80% {
-      transform: rotate(-15deg);
+      transform: rotate(20deg);
+    }
+    85% {
+      transform: rotate(40deg);
     }
     90% {
-      transform: rotate(-10deg);
+      transform: rotate(60deg);
+    }
+    95% {
+      transform: rotate(40deg);
     }
     100% {
-      transform: rotate(0deg);
+      transform: rotate(20deg);
     }
   }
   @keyframes wave-out {
@@ -133,6 +145,7 @@
   }
   &:not(:hover) {
     #{$elementId} {
+      top: -40px;
       animation: wave-out 0.6s ease forwards;
     }
   }

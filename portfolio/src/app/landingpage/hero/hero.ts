@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TranslatePipe, TranslateService} from '@ngx-translate/core';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-hero',
@@ -13,7 +14,7 @@ export class Hero{
   protected profession_special: string= "Frontend";
   protected profession: string = "DEVELOPER";
   protected waveButtonHover: boolean = false;
-  private translate = inject(TranslateService);
+  protected translate = inject(TranslateService);
 
   constructor(){
   }

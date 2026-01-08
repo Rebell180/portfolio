@@ -4,6 +4,9 @@
     @include all.bgImg($path: "../../../../public/assets/img/backgrounds/page/lp/bg_hero.png");
     width: 100dvw;
     height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 // #region Buttons pressed and to press
@@ -11,7 +14,7 @@
 .btn-up {
     width: 16rem;
     height: 36px;
-    // font-size: 16px;
+    font-size: 16px;
     background-color: transparent;
     color: white;
     border-radius: 16px;
@@ -38,26 +41,23 @@
     @include all.borRad();
 }
 
-
-
 // #endregion Buttons pressed and to press
 
 // #region hero content
 
 #hero-content {
-    width: 100%;
-    max-width: 60dvw;
-    height: 70dvh;
+    width: 90rem;
+    height: 100dvh;
 
-    @include all.dFlex($flexdir: column, $gap: 1.6rem);
+    @include all.dFlex($alit: center, $jc: center, $flexdir: column, $gap: 1.6rem);
 
     #hero-img-btn-line {
         width: 100%;
         
-        @include all.dFlex($gap: 12.8rem);
+        @include all.dFlex($gap: 3dvw);
 
         #hero-btn-txt-wrapper {
-            width: 38.4rem;
+            width: 30dvw;
             height: 100%;
             @include all.dFlex($flexdir: column, $jc: space-evenly, $alit: start, $gap: 3.2rem);
 
@@ -73,7 +73,6 @@
                     @include all.txt-switch-effect();
                     @include all.wave-icon(".hand-img");
 
-
                     &:hover {
                         @include all.animate($animation: ElementGrowAnColorLeftToRight, $duration: 0.5s ease-in-out);
                     }
@@ -82,16 +81,20 @@
 
             .text-wrapper {
                 width: 32rem;
+                
+                span {
+                    width: 7rem;
+                }
             }
         }
 
         #img-wrapper {
-
+            width: 20dvw;
             @include all.dFlex($flexdir: column, $alit: center);
 
             #img-polaroid-frame {
                 position: absolute;
-                @include all.size($w: 21.6rem, $h: 25.6rem);
+                @include all.size($w: 24rem, $h: 29rem);
                 rotate: 8deg;
                 z-index: 1;
             }
@@ -99,13 +102,24 @@
             #img-profil-photo {
                 @include all.size($w: 17rem, $h: 25.6rem);
                 rotate: 8deg;
+                filter: grayscale(100%);
             }
 
             #polaroid-txt {
                 position: absolute;
-                bottom: 10%;
-                left: 32%;
+                bottom: 5px;
+                left: 24%;
                 rotate: 8deg;
+                font-size: 28px;
+                z-index: 2;
+
+                #polaroid-smile-txt {
+                    font-size: 28px;
+                }
+            }
+
+            &:hover #img-profil-photo {
+                filter: grayscale(0%);
             }
         }
     }
@@ -113,37 +127,45 @@
     #hero-dev-line {
         width: 100%;
         @include all.dFlex($flexdir: column, $jc: bottom, $alit: flex-end, $gap: 1.6rem);
+    
+        .btn-wrapper {
+            width: 100%;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+    
     }
 }
 // #endregion hero content
 
 // #region hero sozials
 
-    #socials-container {
-        @include all.dFlex($flexdir: column, $gap: 2px);
-        position: absolute;
-        bottom: 10%;
-        left: 5%;
-        z-index: 2;
+#socials-container {
+    @include all.dFlex($flexdir: column, $gap: 2px);
+    position: absolute;
+    bottom: 10rem;
+    left: 3dvw;
+    z-index: 2;
 
-        img {
-            width: 4rem;
-            height: 4rem;
-            @include all.borRad($radius: 4.5rem);
-            padding: 4px;
+    img {
+        width: 4rem;
+        height: 4rem;
+        @include all.borRad($radius: 4.5rem);
+        padding: 4px;
 
-            box-shadow: inset 0 -3px 0 -1px #24DD80;
-            transition: box-shadow .15s ease-in-out;
-            color: black;
-            line-height: 40px;
+        box-shadow: inset 0 -3px 0 -1px #24DD80;
+        transition: box-shadow .15s ease-in-out;
+        color: black;
+        line-height: 40px;
 
-            &:hover {
-                box-shadow: inset 0 -40px 0 -1px #1073EA;
-                // @include all.animate($animation: bgColorFadeInBottomToTop, $duration: 0.5s ease-in);
-            }
+        &:hover {
+            box-shadow: inset 0 -40px 0 -1px #1073EA;
+            // @include all.animate($animation: bgColorFadeInBottomToTop, $duration: 0.5s ease-in);
         }
-
     }
+}
 
 // #endregion hero sozials
 
@@ -161,13 +183,13 @@
 
 .lower {
     &:hover {
-        text-transform: lowercase;
+        text-transform: uppercase;
     }
 }
 
 .upper {
     &:hover {
-        text-transform: uppercase;
+        text-transform: lowercase;
     }
 }
 

@@ -15,12 +15,12 @@
                 </div>
                 
                 <div class="text-wrapper">
-                    @for (item of "Frontend"; track $index) {
+                    @for (item of "Software"; track $index) {
                         @if(item == item.toUpperCase()){
-                            <span class="letter lower">{{item}}</span>     
+                            <span class="letter upper">{{item}}</span>     
                         }
                         @else {
-                            <span class="letter upper">{{item}}</span>
+                            <span class="letter lower">{{item}}</span>
                         }
                     } @empty {
                         <span>undefined</span>
@@ -36,36 +36,33 @@
         </div>
         <div id="hero-dev-line">
             <div class="text-wrapper">
-                <p>
                     @for (item of profession; track $index) {
                         @if(item == item.toUpperCase()){
-                            <span class="letter lower">{{item}}</span>     
+                            <span class="letter upper">{{item}}</span>     
                         }
                         @else {
-                            <span class="letter upper">{{item}}</span>
+                            <span class="letter lower">{{item}}</span>
                         }
                     } @empty {
                         <span>undefined</span>
                     }
-                </p>
+                <!-- </p> -->
             </div>
             <div class="btn-wrapper">
                 <button id="btn-getintouch" class="btn-up" (mouseenter)="setOnClickStyle()" (mouseup)="setOnClickReleaseStyle()" type="button">Get in touch</button>
             </div>
         </div>
-
-        
-    </div>
-
-    <div id="socials-container">
-        <a href="https://www.linkedin.com/in/marcel-buchmann/" target="_blank">
-            <img src="assets/img/icons/white/symbol_linkedIn.png" alt="">
-        </a>
-        <a href="https://github.com/Rebell180"  target="_blank">
-            <img src="assets/img/icons/white/logo_gitH.png" alt="">
-        </a>
-        <a href="mailto:buchmann_marcel@web.de">
-            <img src="assets/img/icons/white/symbol_mail.png" alt="">
-        </a>
     </div>
 </section>
+
+<aside id="socials-container">
+    <a href="https://www.linkedin.com/in/marcel-buchmann/" target="_blank">
+        <img src="assets/img/icons/white/symbol_linkedIn.png" alt="">
+    </a>
+    <a href="https://github.com/Rebell180"  target="_blank">
+        <img src="assets/img/icons/white/logo_gitH.png" alt="">
+    </a>
+    <a href="mailto:buchmann_marcel@web.de">
+        <img src="assets/img/icons/white/symbol_mail.png" alt="">
+    </a>
+</aside>
