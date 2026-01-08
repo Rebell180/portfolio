@@ -1,17 +1,19 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslatePipe, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './hero.html',
   styleUrls: ['./hero.scss']
 })
 export class Hero{
 
-  profession_special: string= "Frontend";
-  profession: string = "DEVELOPER";
-  waveButtonHover: boolean = false;
+  protected profession_special: string= "Frontend";
+  protected profession: string = "DEVELOPER";
+  protected waveButtonHover: boolean = false;
+  private translate = inject(TranslateService);
 
   constructor(){
   }
@@ -22,10 +24,10 @@ export class Hero{
 
     if(polaroidRef !== null && polaroidTxtRef !== null) {
       if(hover) {
-        polaroidRef.src = "assets/img/elementtiles/polaroid.png";
+        polaroidRef.src = "assets/img/elementtiles/polaroid_colored1.png";
         polaroidTxtRef.innerHTML = ":-D";
       } else {
-        polaroidRef.src = "assets/img/elementtiles/polaroid_colored.png";
+        polaroidRef.src = "assets/img/elementtiles/polaroid_colored1.png";
         polaroidTxtRef.innerHTML = `:-)`;
       }
     }

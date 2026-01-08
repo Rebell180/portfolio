@@ -46,7 +46,7 @@
 
 #hero-content {
     width: 100%;
-    max-width: 45dvw;
+    max-width: 60dvw;
     height: 70dvh;
 
     @include all.dFlex($flexdir: column, $gap: 1.6rem);
@@ -62,7 +62,7 @@
             @include all.dFlex($flexdir: column, $jc: space-evenly, $alit: start, $gap: 3.2rem);
 
             #img-btn-wrapper {
-                height: 12.8rem;
+                height: 14rem;
                 @include all.dFlex($flexdir: column, $alit: end, $jc: end);
 
                 #btn-img-waving-hand {
@@ -90,7 +90,14 @@
             @include all.dFlex($flexdir: column, $alit: center);
 
             #img-polaroid-frame {
+                position: absolute;
                 @include all.size($w: 21.6rem, $h: 25.6rem);
+                rotate: 8deg;
+                z-index: 1;
+            }
+
+            #img-profil-photo {
+                @include all.size($w: 17rem, $h: 25.6rem);
                 rotate: 8deg;
             }
 

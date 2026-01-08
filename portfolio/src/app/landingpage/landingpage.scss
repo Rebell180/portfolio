@@ -2,18 +2,23 @@
 
 .section-landingpage {
     background-color: whitesmoke;
-    @include mixins.dFlex($flexdir: col);
+    @include mixins.dFlex($flexdir: column);
+    padding: 0 3dvw;
     
     app-header {
         position: absolute;
         top: 0;
         z-index: 1;
+        width: 100%;
+        height: 10dvh;
+        padding: 0 3dvw;
     }
 
     app-footer {
         position: absolute;
         bottom: 0;
         width: 100%;
+        height: 10dvh;
         padding: 3rem 0;
     }
 }

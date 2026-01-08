@@ -16,17 +16,11 @@ html {
 }
 
 body {
+    width: 100dvw;
     @include mixins.dFlex($flexdir: column);
     background-color: black;
     font-family: 'Bricolage Grotesque';
     font-size: clamp(16px, 2dvw, 30px);
-}
-
-.content {
-    width: 100dvw;
-    max-width: 1440px;
-    padding: 0 5dvw;
-    @include mixins.dFlex($flexdir: column);
 }
 
 h1, h2, h3 {
@@ -62,10 +56,6 @@ a {
 
 .content {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     max-width: 1440px;
-    padding: 0 5dvw;
 }
 

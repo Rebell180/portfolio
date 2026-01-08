@@ -3,7 +3,9 @@
 
         "hero": {
             "polaroid": "Hello :-)",
-            "polaroidHov": "Hello :-D"
+            "polaroidHov": "Hello :-D",
+            "wavebtn": "Hello World!",
+            "wavebtnHov": "I'm Marcel Buchmann!"
         },
         "aboutme": {
 

@@ -5,9 +5,9 @@
                 <div id="img-btn-wrapper">
                     <button id="btn-waving-hand" class="btn-down wave-btn" (mouseover)="waveButtonHover = true" (mouseleave)="waveButtonHover = false" type="button">
                         @if(waveButtonHover) {
-                            <span class="text-to-switch">I'm Marcel Buchmann</span>
+                            <span class="text-to-switch">{{ 'LandingPage.hero.wavebtnHov' | translate }}</span>
                         } @else {
-                            <span class="text-to-switch">Hello world!</span>
+                            <span class="text-to-switch">{{ 'LandingPage.hero.wavebtn' | translate }}</span>
                             
                         }
                         <img id="btn-img-waving-hand" class="hand-img" src="assets/img/icons/white/waving_hand.png" alt="a white symbol of an waving hand animated with hovering.">
@@ -28,7 +28,8 @@
                 </div>
             </div>
             <div id="img-wrapper" (mouseover)="switchPolaroid(true)" (mouseleave)="switchPolaroid(false)">
-                <img id="img-polaroid-frame" src="assets/img/elementtiles/polaroid.png" alt="Shows a polaroid in white as a frame of a developer photo.">
+                <img id="img-polaroid-frame" src="assets/img/elementtiles/polaroid_colored1.png" alt="Shows a polaroid in white as a frame of a developer photo.">
+                <img id="img-profil-photo" src="assets/img/profil.png" alt="Shows a polaroid in white as a frame of a developer photo.">
                 <p id="polaroid-txt">Marcel <span id="polaroid-smile-txt"> :-)</span></p>
             </div>
             
@@ -57,13 +58,13 @@
     </div>
 
     <div id="socials-container">
-        <a href="">
+        <a href="https://www.linkedin.com/in/marcel-buchmann/" target="_blank">
             <img src="assets/img/icons/white/symbol_linkedIn.png" alt="">
         </a>
-        <a href="">
+        <a href="https://github.com/Rebell180"  target="_blank">
             <img src="assets/img/icons/white/logo_gitH.png" alt="">
         </a>
-        <a href="">
+        <a href="mailto:buchmann_marcel@web.de">
             <img src="assets/img/icons/white/symbol_mail.png" alt="">
         </a>
     </div>
