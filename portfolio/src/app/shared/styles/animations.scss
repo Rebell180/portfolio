@@ -32,6 +32,32 @@
 
   // #endregion bgImg - Animations
 
+// #region img - Animations
+
+@keyframes imgFadeInAndOutRepeat {
+  0% {
+    width: 0%;
+    height: 2rem;
+    top: 0;
+  }
+  20% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  70% {
+    width: 0%;
+  }
+  100% {
+    width: 0%;
+  }
+
+  
+}
+
+// #endregion img - Animations
+
 // #region bgColor - Animations
 
   @keyframes bgColorFadeInBottomToTop {

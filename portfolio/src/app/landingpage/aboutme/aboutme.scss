@@ -1,9 +1,13 @@
 @use "../../shared/styles/all-styles" as all;
 
-
 #section-aboutme {
+    width: 100%;
+    height: 80dvh;
+
     .aboutme-container{
-        @include all.dFlex($alit: start);
+        width: 100%;
+        height: 80dvh;
+        @include all.dFlex($alit: center);
         
         #aboutme-left-side {
             width: 50%;
@@ -11,10 +15,12 @@
 
             .aboutme-main-info-container {
                 @include all.dFlex($flexdir: column, $jc: center);
-                width: 75%;
+                width: 80%;
+                height: 15%;
 
                 >img {
                     width: 100%;
+                    height: 16rem;
                 }
                 
                 .icon-txt-container {
@@ -28,7 +34,7 @@
                     
                     span {
                         color: white;
-                        // font-size: 20px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -75,15 +81,48 @@
             h2 {
                 width: 100%;
                 font-size: 64px;
-                margin-bottom: 1.6rem;
+            }
+
+            img {
+                max-width: 50%;
+                height: 2rem;
+                @include all.animate($animation: imgFadeInAndOutRepeat, $duration: 4s infinite, $transition: 2s ease-in);
+                margin-bottom: 5rem;
             }
 
             p {
-                width: 80%;
+                width: 90%;
+                font-size: 18px;
+                margin-bottom: 3rem;
+            }
+
+            .btn-contact-container {
+                width: 90%;
+                display: flex;
+                justify-content: end;
+
+                .btn-up {
+                    align-items: end;
+                    width: 16rem;
+                    height: 36px;
+                    font-size: 16px;
+                    background-color: transparent;
+                    color: black;
+                    border-radius: 16px;
+                    
+                    @include all.boxSh($c: black);
+                    @include all.borRad($c: black);
+                    
+                    margin-bottom: 4px;
+                    margin-right: 4px;
+                    
+                    &:hover {
+                        box-shadow: none;
+                        background-color: lightcoral;
+                        @include all.btnPressAnimation();
+                    }
+                }
             }
         }
     }
-
-
-
 }
