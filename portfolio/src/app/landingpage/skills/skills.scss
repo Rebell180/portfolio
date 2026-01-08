@@ -2,7 +2,7 @@
 
 .section-skills {
     @include all.bgImg($path: "../../../../public/assets/img/backgrounds/page/lp/bg_skills.png");
-    height: 90dvh;
+    height: 100dvh;
     @include all.dFlex($alit: start);
     padding: 5rem;
 }
